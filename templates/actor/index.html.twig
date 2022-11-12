@@ -9,10 +9,10 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Birthday</th>
-                <th>Gender</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Date de naissance</th>
+                <th>Sexe</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -22,7 +22,7 @@
                 <td>{{ actor.id }}</td>
                 <td>{{ actor.firstname }}</td>
                 <td>{{ actor.lastname }}</td>
-                <td>{{ actor.birthday ? actor.birthday|date('Y-m-d') : '' }}</td>
+                <td>{{ actor.birthday ? actor.birthday|date('d-m-Y') : '' }}</td>
                 <td>{{ actor.gender }}</td>
                 <td>
                     <a href="{{ path('app_actor_show', {'id': actor.id}) }}">show</a>
